@@ -1,6 +1,6 @@
 // Przycisk zainicjowania nowej gry
-var newGameBtn = document.getElelementById('js-newGameButton');
-newGameBtn.addEventListener('click'.newGame);
+var newGameBtn = document.getElementById('js-newGameButton');
+newGameBtn.addEventListener('click', newGame);
 
 
 //Przyciski wyboru gracza
@@ -40,7 +40,7 @@ function setGameElements(gameState, winnerIs) {
         resultsElem.style.display = 'block';
       break;
     case 'ended':
-        newGameBtn.innerText = 'Wygrał ' + winnerIs + '. Jeszcze raz?';
+        newGameBtn.innerText = 'Jeszcze raz?';
     case 'notStarted':
     default:
         newGameElem.style.display = 'block';
