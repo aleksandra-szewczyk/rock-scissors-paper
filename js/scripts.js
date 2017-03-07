@@ -114,7 +114,7 @@ function setGamePoints() {
 
 
 //Zakończenie gry
-function checkGameEnd(playerPoints, computerPoints) {
+function checkGameEnd() {
     if (player.score == 10) {
         alert('Gratulacje, wygrałeś/-aś rozgrywkę!');
         gameState = 'ended';
