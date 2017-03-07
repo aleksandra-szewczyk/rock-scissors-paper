@@ -95,15 +95,12 @@ function checkRoundWinner(playerPick, computerPick) {
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Wygrana jest Twoja!";
         player.score++;
-    } else if (winnerIs == 'computer') {
+    } else {
         computerResultElem.innerHTML = "Wygrał komputer!";
         computer.score++;
-    } else {
-		playerResultElem.innerHTML = "Remis!";
-		computerResultElem.innerHTML = "Remis!";
-	}
+    } 
     setGamePoints();
-    checkGameEnd(player.score, computer.score);
+    checkGameEnd();
 }
 
 //Aktualizacja wyników
@@ -122,7 +119,7 @@ function checkGameEnd() {
     else if (computer.score == 10) {
         alert('Niestety, wygrał komputer');
         gameState = 'ended';
-    };
+    }
     setGameElements(gameState, winnerIs);
 }
 setGameElements(gameState, winnerIs);
